@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'abouts#index'
+  root 'posts#index'
 
   resources :users, only: [:new, :create] # ONLY FOR THE FIRST ADMIN SIGNUP
   resources :clients, only: [:index]
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   namespace :admin do
-    root 'abouts#index'
+    root 'posts#index'
     resources :clients
     resources :abouts, path: 'about'
     resources :posts, path: 'news'
