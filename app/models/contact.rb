@@ -1,3 +1,4 @@
 class Contact < ActiveRecord::Base
-  validates :name, :email, :message, presence: true
+  validates :name, :message, presence: true
+  validates :email, email: true
 end

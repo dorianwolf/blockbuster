@@ -1,3 +1,3 @@
 class Client < ActiveRecord::Base
-  validates :name, :image, presence: trues
+  validates :name, :image, presence: true
 end
